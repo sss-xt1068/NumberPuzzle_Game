@@ -37,7 +37,8 @@ abstract class NumberPuzzleControl {
 		int[] buttonIds = new int[15];
 		for(int i=0;i<15;++i)
 		{
-			buttonIds[i] = Integer.parseInt(buttons[i].getLabel());
+			if(!buttons[i].getLabel().trim().isEmpty())
+				buttonIds[i] = Integer.parseInt(buttons[i].getLabel());
 		}
 		return buttonIds;
 	} 
